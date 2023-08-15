@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 
 services:
   banco:
@@ -9,4 +9,6 @@ services:
       - MARIADB_USER=ponto
       - MARIADB_PASSWORD=PONTO@123
     volumes:
-      - c:/users/ksl19/ponto/ponto_db:/var/lib/mysql
+      - ./ponto_db:/var/lib/mysql
+    ports:
+      - 13306:3306
